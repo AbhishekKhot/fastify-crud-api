@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "config": "^3.3.9",
-    "fastify": "^4.13.0"
+    "fastify": "^4.13.0",
+    "jsonwebtoken": "^9.0.0"
   }
 }

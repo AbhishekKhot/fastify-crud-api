@@ -1,6 +1,8 @@
 const posts = require("../cloud/posts.js");
 
-
+const getTestHandler = (req, reply) =>{
+  reply.send('test route');
+}
 const getPostsHandler = (req, reply) => {
   reply.send(posts);
 };
@@ -63,6 +65,7 @@ const deletePostHandler = (req, reply) => {
 };
 
 module.exports = {
+  getTestHandler,
   getPostsHandler,
   getPostHandler,
   addPostHandler,

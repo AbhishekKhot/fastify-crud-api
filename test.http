@@ -1,3 +1,6 @@
+###TESTING ROUTE
+GET http://localhost:5000/test HTTP/1.1
+
 ###GET ALL POSTS
 GET http://localhost:5000/api/posts HTTP/1.1
 
@@ -25,3 +28,27 @@ content-type: application/json
 ###DELETE A POST
 DELETE http://localhost:5000/api/posts/2  HTTP/1.1
 
+
+###GET APP ADMINS
+GET http://localhost:5000/api/admins HTTP/1.1
+
+
+###ADDING NEW ADMIN
+POST http://localhost:5000/api/admins/new HTTP/1.1
+content-type: application/json
+
+{
+  "username": "new_user",
+  "email": "newuser@gmail.com",
+  "password": "007"
+}
+
+###LOGIN ADMIN
+POST http://localhost:5000/api/admins/login HTTP/1.1
+content-type: application/json
+
+{
+  "username": "new_user",
+  "email": "newuser@gmail.com",
+  "password": "007"
+}

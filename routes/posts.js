@@ -1,4 +1,5 @@
 const {
+  getTestSchema,
   getPostsSchema,
   getPostSchema,
   addPostSchema,
@@ -7,6 +8,7 @@ const {
 } = require('../schemas/posts.js');
 
 const {
+  getTestHandler,
   getPostsHandler,
   getPostHandler,
   addPostHandler,
@@ -14,6 +16,10 @@ const {
   deletePostHandler,
 } = require('../handlers/posts.js');
 
+const getTestOpts = {
+  schema: getTestSchema,
+  handler: getTestHandler,
+}
 const getPostsOpts = {
   schema: getPostsSchema,
   handler: getPostsHandler,
@@ -40,6 +46,8 @@ const deletePostOpts = {
 };
 
 const postRoutes = (fastify, opts, done) => {
+  //testing route 
+  fastify.get('/test', getTestOpts)
   // get all posts
   fastify.get('/api/posts', getPostsOpts);
 

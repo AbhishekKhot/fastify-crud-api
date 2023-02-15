@@ -9,6 +9,12 @@ const post = {
   },
 };
 
+const getTestSchema = {
+  response : {
+    200:typeString,
+  },
+}
+
 const getPostsSchema = {
   response: {
     200: {
@@ -68,6 +74,7 @@ const deletePostSchema = {
 };
 
 module.exports = {
+  getTestSchema,
   getPostsSchema,
   getPostSchema,
   addPostSchema,
